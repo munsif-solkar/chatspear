@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/spear.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/homepage-style.css') }}">
+    <title>Chatspear - Anonymous chat</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main_text">
+            <h3>CHATSPEAR</h3>
+            <img src="../static/spear.png" alt="chatspear_logo" height="40">
+            <p id="short_info">Anonymous chatting platform</p>
+            <p id="description">simplistic and safe chatting platform,just create your room and share the room name or the url (/chatspear.com/room_name) with your friends to join in.</p>
+        </div>
+        <form id="room-form">
+            <p>Enter Room name you would like to Create / Join</p>
+            <input type="text" placeholder="@roomname" id="gotoroom" autocomplete="off" maxlength="15" minlength="4" required>
+            <button type="submit">Join / Create</button>
+        </form>
+        <div class="some-rooms">
+            <p>Some Public Channels</p>
+            <a href="/science">/science <span>{{ science_channel_users|length }} online</span></a>
+            <a href="/technology">/technology <span>{{ tech_channel_user|length }} online</span></a>
+            <a href="/entertainment">/entertainment <span>{{ entertainment_channel_users|length }} online</span></a>
+            <a href="/moviesandshows">/moviesandshows <span>{{ moviesandshows_channel_users|length }} online</span></a>
+            <a href="/astronomy">/astronomy <span>{{ astronomy_channel_users|length }} online</span></a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("submit",function(event){
+            event.preventDefault()
+            var gotoroom = document.getElementById('gotoroom').value;
+            window.location.href = '/'+gotoroom;
+        })
+    </script>
+</body>
+</html>

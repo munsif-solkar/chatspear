@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+
+}
+body{
+    background: #121111;
+    background:url('/static/bg-animation.gif');
+    background-size:cover;
+    padding:0px 10px;
+}
+.container{
+    background: rgb(115 115 115 / 12%);
+    max-width: 500px;
+    margin:30px auto;
+    padding:1em;
+    border:1px solid #5858586e;
+    border-radius:3px;
+}
+.container .main_text{
+    text-align: center;
+    color:#f8f8f8;
+    position: relative;
+}
+.container .main_text h3{
+    font-weight: bold;
+    font-size: 25px;
+}
+.main_text img{
+   margin-top: 10px;
+}
+.main_text #short_info{
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+}
+.main_text #description{
+    margin:10px 0px;
+    color: #b1aeae;
+    line-height: 22px;
+    padding:0px 10px;
+    text-align:left;
+    font-size:15px;
+    line-break:anywhere
+}
+#room-form{
+    border: 1px solid rgb(29, 29, 29);
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #141414;
+}
+#room-form p{
+    color:gray;
+    margin:0px 0px 10px 3px;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+#room-form input[type=text]{
+    padding:8px 20px;
+    outline: none;
+    font-size: 17px;
+    text-align: left;
+    background: #070707;
+    border: 1px dotted rgb(97, 97, 97);
+    border-radius: 5px;
+    color: #727272;
+    letter-spacing: 1px;
+}
+#room-form input[type=text]::placeholder{
+    font-size: 14px;
+
+}
+#room-form button{
+    padding: 0.7em;
+    border: none;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #444444;
+    color: #f8f8f8;
+}
+.some-rooms{
+    padding:12px;
+}
+.some-rooms p{
+    color:#fff;
+    margin:4px 0px;
+    font-size:13px;
+}
+.some-rooms a{
+    text-decoration:none;
+    color:gray;
+    display:block;
+    line-height:22px;
+    transition:100ms;
+}
+.some-rooms a:hover{
+    color:#fff;
+}
+.some-rooms a span{
+    font-size:11px;
+    color:green;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../static/js/brain.js" defer></script>
+    <script src="../static/js/options.js" defer></script>
+    <link rel="stylesheet" href="../static//style/style.css">
+    <link rel="shortcut icon" href="../static/spear.png" type="image/x-icon">
+    <title>{{roomName}} - Chatspear</title>
+</head>
+<body>
+    <main>
+<nav>
+    <h3 align='center'>{{roomName}}</h3>
+    <div class="options">
+        <img src="../static/settings.png" alt="options" height="20" class='toggle-options'>
+    </div>
+</nav>
+<div class="options-box">
+    <div class="main-options">
+        <p class="toggle-options">×</p>
+        <div id="switch-button">
+            <p>Sound notifications</p>
+        <label class="switch">
+            <input type="checkbox" class="notification-switch" checked>
+            <span class="slider"></span>
+        </label>
+        </div>
+        <div class="channel-actions">
+            <button class="clear-chatbox">Clear chats</button>
+            <button class='leave-channel'>Leave channel</button>
+            <button class='destroy-channel' hidden>Destroy Room</button>
+        </div>
+    </div>
+</div>
+<div class="online_users">
+    <p class="toggle_online_users close_button"><span style="float:left;font-size:15px;margin:10px;font-weight:bold;text-transform:uppercase">Users online: <strong id="users_count"></strong></span>&times</p>
+    <div class="room_schema">
+        <span>Admin</span>
+        <p id="room_admin"></p>
+        <!-- <span>Creator</span>
+        <p id="room_creator"></p> -->
+    </div>
+    <div class="users_entries">
+        
+    </div>
+</div>
+
+<form class="Form">
+    <div class="chats">
+
+    </div>
+    <div class="chat-control">
+        <div class="toggle_online_users appear">
+            <img src="../static/online-users.png" alt="online_users" height="20">
+        </div>
+    <textarea type="text" autocomplete="off" autofocus="on" style="height: 38px;resize:none" placeholder="Message" id="message" /></textarea>
+    <button type="submit">Send</button>
+    </div>
+</form>
+</main>
+
+</body>
+</html>
